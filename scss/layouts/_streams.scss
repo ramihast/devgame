@@ -44,6 +44,7 @@
           transform: scale(1.2);
           @include Responsive(tabletL) {
             transition: none;
+            transform: none;
           }
         }
       }

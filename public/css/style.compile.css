@@ -803,6 +803,9 @@ body {
   .best__content {
     width: 89%;
     margin: 0 auto; }
+    @media only screen and (max-width: 62em) {
+      .best__content {
+        width: 100%; } }
     .best__content-box {
       width: 30rem; }
     .best__content-main {
@@ -833,7 +836,7 @@ body {
       .best__content-img:hover {
         transform: scale(1.1); }
     .best__content-num {
-      background: url(/public/images/number.png) no-repeat;
+      background: url(../../images/number.png) no-repeat;
       width: 5rem;
       height: 6rem;
       display: inline-block;
@@ -1112,12 +1115,15 @@ body {
     overflow: hidden; }
     @media only screen and (max-width: 36em) {
       .tournaments__info-item {
-        justify-content: flex-start; } }
+        gap: 1rem; } }
   .tournaments__info-game {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem; }
+    @media only screen and (max-width: 36em) {
+      .tournaments__info-game {
+        gap: 0; } }
   .tournaments__info-pic {
     width: 8rem; }
   .tournaments__info-description {
@@ -1173,9 +1179,21 @@ body {
     top: 0;
     right: 0;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); }
+    @media only screen and (max-width: 36em) {
+      .tournaments__info-bg1 {
+        width: 10rem;
+        clip-path: polygon(37% 0, 100% 0, 100% 100%, 0px 100%);
+        padding: 1rem;
+        justify-content: flex-end; } }
     .tournaments__info-bg1.bg2 {
       height: 100%;
       background: linear-gradient(110deg, #2172e4 0, #2172e4 28%, #0761dc 28%, #0761dc 100%); }
+      @media only screen and (max-width: 36em) {
+        .tournaments__info-bg1.bg2 {
+          width: 10rem;
+          clip-path: polygon(37% 0, 100% 0, 100% 100%, 0px 100%);
+          padding: 1rem;
+          justify-content: flex-end; } }
   .tournaments__info-more {
     width: 100%;
     padding: 2rem 0;
@@ -1293,7 +1311,8 @@ body {
           transform: scale(1.2); }
           @media only screen and (max-width: 75em) {
             .streams__content-pic:hover .streams__content-img {
-              transition: none; } }
+              transition: none;
+              transform: none; } }
     .streams__content-img {
       width: 100%;
       height: 100%;

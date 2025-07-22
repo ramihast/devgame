@@ -14,8 +14,6 @@
     @include centerizeTag(center, space-between);
     gap: 3rem;
 
-    &-item {
-    }
     &-pic {
       @include centerizeTag();
       flex-direction: column;

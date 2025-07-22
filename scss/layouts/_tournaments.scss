@@ -187,10 +187,6 @@
       }
     }
 
-    &-body {
-    }
-    &-items {
-    }
     &-item {
       height: 5rem;
       @include centerizeTag(center, space-between);
@@ -257,15 +253,17 @@
       position: relative;
       overflow: hidden;
       @include Responsive(phone) {
-        justify-content: flex-start;
+        gap: 1rem;
       }
     }
     &-game {
       @include centerizeTag(flex-start);
       gap: 1rem;
+      @include Responsive(phone) {
+        gap: 0;
+      }
     }
-    &-image {
-    }
+
     &-pic {
       width: 8rem;
     }
@@ -314,6 +312,12 @@
     }
 
     &-bg1 {
+      @include Responsive(phone) {
+        width: 10rem;
+        clip-path: polygon(37% 0, 100% 0, 100% 100%, 0px 100%);
+        padding: 1rem;
+        justify-content: flex-end;
+      }
       @include centerizeTag();
       font-weight: bold;
       color: $color-white;
@@ -341,6 +345,12 @@
           $color-secondary 28%,
           $color-secondary 100%
         );
+        @include Responsive(phone) {
+          width: 10rem;
+          clip-path: polygon(37% 0, 100% 0, 100% 100%, 0px 100%);
+          padding: 1rem;
+          justify-content: flex-end;
+        }
       }
     }
     &-more {
@@ -369,8 +379,7 @@
       color: $color-white;
       font-size: $font-size-title;
     }
-    &-title {
-    }
+
     &-subtitle {
       color: $color-green;
       font-size: $font-size-default;
@@ -383,8 +392,7 @@
     &-item {
       margin-bottom: 3.5rem;
     }
-    &-btn {
-    }
+
     &-link {
       width: 100%;
       padding: 1.5rem 0;
@@ -409,8 +417,7 @@
     &-teams {
       @include centerizeTag(space-between);
     }
-    &-team {
-    }
+
     &-score {
       span {
         font-size: 2.3rem;
@@ -437,8 +444,6 @@
       font-weight: bold;
       color: $color-subtitle;
       font-size: 1.4rem;
-    }
-    &-progress {
     }
   }
 }
