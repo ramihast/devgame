@@ -1,0 +1,146 @@
+.popular {
+  width: 100%;
+  padding: 25px 0;
+
+  &__content {
+    width: $main-width;
+    margin: 0 auto;
+    @include Responsive(tablet) {
+      width: 100%;
+    }
+
+    &-items {
+      width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+    &-item {
+      width: 31%;
+      height: auto;
+      margin: 1rem;
+      @include Responsive(tabletL) {
+        width: 46%;
+        height: 20rem;
+        flex-direction: column;
+        margin-bottom: 26rem;
+      }
+      @include Responsive(phoneL) {
+        width: 90%;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        height: 50rem;
+      }
+    }
+    &-image {
+      height: 30rem;
+      width: 100%;
+      background-color: $color-primary;
+      border-radius: 0.8rem;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      @include Responsive(phoneL) {
+        height: 39rem;
+      }
+    }
+    &-pic {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.8rem;
+      @include Responsive(phoneL) {
+        height: 35rem;
+      }
+    }
+    &-shape {
+      width: 20rem;
+      height: 100%;
+      background-color: $color-secondary;
+      position: absolute;
+      top: 0;
+      right: 0;
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+      transition: all 0.8s ease-in;
+      cursor: pointer;
+      &:hover {
+        width: 100%;
+      }
+      &--1 {
+        color: $color-white;
+        z-index: 10;
+        @include centerizeTag();
+        font-size: $font-size-title;
+        font-weight: bold;
+      }
+      &--2 {
+        right: 0.5rem;
+        background-color: $color-secondary-light;
+      }
+    }
+
+    &-info {
+      margin-top: 2rem;
+      @include centerizeTag(space-between);
+    }
+    &-left {
+      width: 50%;
+    }
+
+    &-title {
+      color: $color-white;
+      font-size: $font-size-lg;
+      font-weight: bold;
+    }
+    &-description {
+      font-size: $font-size-sm;
+      margin: 1.5rem 0;
+      color: $color-white;
+      line-height: 2rem;
+    }
+    &-lists {
+      @include centerizeTag(center, flex-start);
+      gap: 1.5rem;
+    }
+    &-circle {
+      width: 2rem;
+      height: 2rem;
+      background-color: $color-primary;
+      border-radius: 100%;
+      @include centerizeTag();
+      box-shadow: 0 0 0.9rem $color-green;
+      &-tiny {
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: $color-green;
+        border-radius: 100%;
+      }
+    }
+    &-rate,
+    &-online {
+      font-size: $font-size-sm;
+      color: $color-white;
+    }
+    &-right {
+      width: 50%;
+      @include centerizeTag(flex-end);
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &-match {
+      gap: 1rem;
+    }
+    &-score {
+      color: $color-orange;
+      font-weight: bold;
+    }
+    &-flag {
+      width: 1.5rem;
+    }
+    &-team {
+      color: $color-white;
+      font-weight: bold;
+    }
+  }
+}

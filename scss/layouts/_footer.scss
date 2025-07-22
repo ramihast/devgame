@@ -1,0 +1,69 @@
+.footer {
+  @include Responsive(phoneL) {
+    display: none;
+  }
+  width: 100%;
+  margin-top: 2.5rem;
+
+  height: auto;
+  background-color: $color-primary;
+  padding: 3rem 0;
+  &__content {
+    width: 83%;
+    margin: 0 auto;
+    @include centerizeTag(center, space-between);
+    gap: 3rem;
+
+    &-item {
+    }
+    &-pic {
+      @include centerizeTag();
+      flex-direction: column;
+      gap: 2rem;
+    }
+    &-img {
+      width: 10rem;
+    }
+    &-sublogo {
+      color: $color-white;
+      font-weight: bold;
+    }
+    &-list,
+    &-copy {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1.2rem;
+      color: $color-subtitle;
+      font-weight: bold;
+    }
+    &-socialmedia {
+      @include centerizeTag();
+      gap: 1.5rem;
+    }
+    &-social {
+      width: 4.5rem;
+      height: 4.5rem;
+      background-color: $color-bg;
+      display: flex;
+      border-radius: 0.5rem;
+      @include centerizeTag();
+      box-shadow: 0 0 0.5rem $color-shadow;
+      transition: all 0.4s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.5rem);
+        .footer__content-icon {
+          transform: rotateY(360deg);
+          color: $color-purple;
+        }
+      }
+    }
+    &-icon {
+      transition: all 0.4s ease-in;
+
+      color: $color-white;
+      font-size: 1.8rem;
+    }
+  }
+}

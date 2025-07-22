@@ -1,0 +1,55 @@
+html {
+  font-size: 62.5%;
+  //!   10px
+
+  @include Responsive(tablet) {
+    font-size: 56.25%;
+  }
+  //!   9px
+
+  @include Responsive(phoneL) {
+    font-size: 50%;
+  }
+  //!   8px
+
+  @include Responsive(phone) {
+    font-size: 44%;
+  }
+  //!   7px
+}
+
+/* 
+!0-576px= Phone
+!576px-768px= Phone Landscape
+!768px-992px= Tablet Portrait
+!992px-1200px= Tablet Landscape
+!1200px - 1800px= Laptop
+!1800px > = Big Desktop
+*/
+
+* {
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: $color-bg;
+  font-family: $font-poppins;
+  font-weight: 500;
+}

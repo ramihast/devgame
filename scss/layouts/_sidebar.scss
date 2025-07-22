@@ -1,0 +1,203 @@
+//!!! start sidebar styles
+.sidebar {
+  width: 17%;
+  padding-bottom: 15px;
+  background-color: $color-primary;
+  position: sticky;
+  border-radius: 0 15px 15px 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  @include Responsive(laptop) {
+    top: 0;
+    left: -200rem;
+    position: fixed;
+    width: 24vw;
+    z-index: 20;
+  }
+  @include Responsive(tabletL) {
+    width: 40vw;
+  }
+  @include Responsive(tablet) {
+    width: 40vw;
+  }
+  @include Responsive(phoneL) {
+    width: 50vw;
+  }
+  @include Responsive(phoneL) {
+    width: 60vw;
+  }
+  //!!! playtoo sidebar styles
+  &__playtoo {
+    padding: 25px;
+    flex-direction: column;
+    position: relative;
+    @include centerizeTag();
+    &-close {
+      display: none;
+      @include Responsive(laptop) {
+        display: flex;
+      }
+      position: absolute;
+      font-size: 4rem;
+      color: white;
+      top: 0;
+      right: 0;
+      margin: 1rem;
+    }
+    &-pic {
+      width: 55%;
+    }
+    &-text {
+      color: $color-white;
+      font-size: 35px;
+      font-family: $font-rubik;
+      margin-top: 15px;
+    }
+  }
+  //!!! filter sidebar styles
+  &__filter {
+    border-bottom: 3px solid $color-black;
+    @include Responsive(laptop) {
+      border: none;
+    }
+
+    &-title {
+      width: 95%;
+      padding: 20px;
+      background-color: $color-secondary;
+      border-radius: 0 5px 5px 0;
+    }
+    &-text {
+      color: $color-white;
+      display: block;
+      text-align: right;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    &-list {
+      width: 100%;
+    }
+    &-items {
+      width: 80%;
+      margin: 15px auto;
+    }
+    &-item {
+      width: 100%;
+      padding: 10px 0;
+      @include centerizeTag(center, space-between);
+      opacity: 0.6;
+      gap: 10px;
+      color: $color-fiter;
+      transition: all 0.1s ease-in;
+      &:hover {
+        color: $color-white;
+        opacity: 1;
+      }
+    }
+    &-description {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    &-icon {
+      width: 43px;
+      height: 50px;
+      background: url(../../public/images/sidebar-slider.png) no-repeat;
+      background-size: cover;
+      &--1 {
+        background-position: -43px 0px;
+      }
+      &--2 {
+        background-position: 0 0;
+      }
+      &--3 {
+        background-position: -158px 0px;
+      }
+      &--4 {
+        background-position: -80px 0px;
+      }
+      &--5 {
+        background-position: -117px 0px;
+      }
+    }
+    &-description {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  //!!! friends sidebar styles
+  &__friends {
+    @include Responsive(laptop) {
+      display: none;
+    }
+    &-content {
+      width: 80%;
+      margin: 10px auto;
+    }
+    &-head {
+      width: 100%;
+      color: $color-white;
+    }
+    &-items {
+      margin-top: 15px;
+    }
+    &-item {
+      @include centerizeTag(space-between);
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &-info {
+      @include centerizeTag(flex-start);
+      gap: 15px;
+    }
+    &-image {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $color-white;
+      border-radius: 100%;
+    }
+    &-pic {
+      width: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &-test {
+      color: $color-fiter;
+      font-size: 14px;
+    }
+    &-box {
+      width: 60px;
+      @include centerizeTag();
+    }
+    &-icon {
+      color: $color-fiter;
+    }
+    &-circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: green;
+    }
+  }
+  //!!! rocket sidebar styles
+  &__rocket {
+    @include Responsive(laptop) {
+      display: none;
+    }
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    &:hover {
+      border: 1px solid $color-primary;
+      padding: 2px;
+      border-radius: 10px;
+    }
+    &-pic {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.dev-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include Responsive(phoneL) {
+    flex-direction: column;
+  }
+  @include Responsive(tablet) {
+      padding: 0 2rem
+    }
+  &__list {
+    @include centerizeTag();
+    gap: 2.5rem;
+    @include Responsive(phoneL) {
+      justify-content: flex-end;
+    }
+  }
+  &__item {
+    font-size: 1.4rem;
+    color: $color-white;
+    font-weight: bold;
+    padding-top: 1rem;
+    &.active {
+      color: $color-secondary;
+      border-top: 0.2rem solid $color-secondary;
+    }
+  }
+  
+}

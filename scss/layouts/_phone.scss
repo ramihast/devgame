@@ -1,0 +1,28 @@
+.phone {
+  z-index: 10;
+  width: 100%;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: $color-secondary;
+  @include Responsive(phoneL) {
+    display: flex;
+  }
+  &__content {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    &-items {
+      height: 10rem;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: antiquewhite;
+    }
+  }
+}

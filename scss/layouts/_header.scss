@@ -1,0 +1,119 @@
+.header {
+  height: auto;
+  width: 100%;
+  @include centerizeTag($justify: flex-end);
+  padding: 0 1rem;
+
+  &__content {
+    padding: 10px 0;
+    width: 40%;
+    gap: 7px;
+    @include centerizeTag($justify: flex-end);
+    @include Responsive(laptop) {
+      width: 100%;
+      padding: 1rem 2rem;
+    }
+    @include Responsive(phone) {
+      justify-content: center;
+    }
+    &-search {
+      display: flex;
+      position: relative;
+    }
+    &-input {
+      width: 40rem;
+
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 1rem 2.5rem;
+      border-radius: 1.5rem;
+      border: none;
+      font-size: $font-size-sm;
+      @include Responsive(tablet) {
+        width: 60rem;
+      }
+      @include Responsive(tabletL) {
+        width: 30rem;
+      }
+      @include Responsive(phone) {
+        width: 40rem;
+      }
+    }
+    &-circle {
+      width: 4rem;
+      height: 4rem;
+      background-color: $color-secondary;
+      color: $color-white;
+      border-radius: 100%;
+      @include centerizeTag();
+      position: absolute;
+      right: 0;
+      @include Responsive(phone) {
+        display: none;
+      }
+    }
+    &-bell {
+      width: 4.5rem;
+      height: 100%;
+      @include centerizeTag();
+      position: relative;
+      @include Responsive(phone) {
+        display: none;
+      }
+      &-icon {
+        font-size: 2.5rem;
+        color: $color-white;
+      }
+      &-circle {
+        width: 2rem;
+        height: 2rem;
+        background-color: $color-secondary;
+        color: $color-white;
+        @include centerizeTag();
+        font-size: 1rem;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-user {
+      @include centerizeTag();
+      gap: 1rem;
+      &-text {
+        display: flex;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include Responsive(tablet) {
+          display: none;
+        }
+      }
+      &-pic {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        border: 0.1rem solid $color-secondary;
+        padding: 0.1rem;
+        @include Responsive(tablet) {
+          display: none;
+        }
+      }
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__hamburger {
+    display: none;
+    @include Responsive(laptop) {
+      display: flex;
+    }
+    &-icon {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }
+}

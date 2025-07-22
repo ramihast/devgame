@@ -1,0 +1,150 @@
+.streams {
+  width: 100%;
+  margin-top: 3.5rem;
+
+  &__content {
+    width: $main-width;
+    margin: 0 auto;
+    @include Responsive(tablet) {
+      width: 100%;
+    }
+    &-main {
+      @include centerizeTag(space-between);
+      margin-top: 25px;
+      gap: 3rem;
+      @include Responsive(tablet) {
+        flex-wrap: wrap;
+      }
+    }
+    &-left {
+      height: 100%;
+      background-color: $color-primary;
+      width: 70%;
+      border-radius: 10px;
+      padding: 25px;
+      position: relative;
+      overflow: hidden;
+      @include Responsive(tablet) {
+        width: 90%;
+      }
+    }
+    &-pic {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        .streams__content-card {
+          top: 0;
+        }
+        .streams__content-img {
+          transform: scale(1.2);
+          @include Responsive(tabletL) {
+            transition: none;
+          }
+        }
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.6s ease-in;
+      object-fit: cover;
+      @include Responsive(tabletL) {
+        transition: none;
+      }
+    }
+    &-card {
+      transition: all 0.6s ease-in;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #4375b2 39%, #a43337 100%);
+      @include centerizeTag();
+      font-size: 60px;
+      color: $color-white;
+      letter-spacing: 15px;
+      font-weight: bold;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      opacity: 0.6;
+      text-align: center;
+      @include Responsive(tabletL) {
+        display: none;
+      }
+    }
+    &-right {
+      width: 28%;
+      @include Responsive(tablet) {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        gap: 3rem;
+        height: 50%;
+        margin-bottom: 10rem;
+      }
+    }
+    &-item {
+      background-color: $color-primary;
+      border-radius: 10px;
+      width: 100%;
+      height: 49%;
+      margin-bottom: 10px;
+      padding: 15px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      flex-direction: column;
+      gap: 5px;
+      display: flex;
+    }
+    &-title {
+      color: $color-white;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    &-subtitle {
+      color: $color-white;
+      font-weight: bold;
+      font-size: $font-size-sm;
+    }
+    &-play {
+      width: 40px;
+      height: 40px;
+      background-color: $color-secondary;
+      border-radius: 100%;
+      @include centerizeTag();
+      @include positioncenter();
+      box-shadow: 0 0 15px $color-shadow;
+    }
+    &-icon {
+      font-size: 15px;
+      color: $color-white;
+    }
+    &-discount {
+      width: 250px;
+      height: 55px;
+      background-color: $color-discount;
+      clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+      @include centerizeTag();
+      font-weight: bold;
+      position: absolute;
+      top: 12px;
+      right: -64px;
+      transform: rotate(33deg);
+    }
+  }
+}
