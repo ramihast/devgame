@@ -460,7 +460,7 @@ body {
     .sidebar__filter-icon {
       width: 43px;
       height: 50px;
-      background: url(../../public/images/sidebar-slider.png) no-repeat;
+      background: url(../../../images/sidebar-slider.png) no-repeat;
       background-size: cover; }
       .sidebar__filter-icon--1 {
         background-position: -43px 0px; }
